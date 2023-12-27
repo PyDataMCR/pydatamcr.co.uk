@@ -1,0 +1,23 @@
+name: Testing actions
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  airtable:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Code
+        id: runner
+        run: |
+          python main.py
