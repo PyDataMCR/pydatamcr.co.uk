@@ -24,7 +24,7 @@ def main() -> int:
     upcoming_events = load_airtable_data(
         airtable_api, "tblzcEGAmSqFskbae", generate_events_formula()
     )
-    return upcoming_events
+    return (open_jobs, airtable_api)
 
 
 if __name__ == "__main__":
