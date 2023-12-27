@@ -52,4 +52,4 @@ def write_to_output(context: Dict[str, str]) -> None:
 
 if __name__ == "__main__":
     # open_jobs = main()
-    write_to_output({"Name": "John"})
+    write_to_output({"name": "John"})

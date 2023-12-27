@@ -25,4 +25,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run the script
+        id: runner
         run: python main.py
+
+      - name: Echo var
+        run |
+          echo ${{ steps.runner.name }}
