@@ -30,4 +30,5 @@ jobs:
 
       - name: Echo var
         run: |
+          echo "" && \
           echo ${{ steps.runner.name }}
