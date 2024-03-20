@@ -6,8 +6,9 @@ authors = ["jasper <jaspajjr@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8.1,<4.0"
 pyairtable = "^2.2.1"
+pelican = {extras = ["markdown"], version = "^4.9.1"}
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.0"
