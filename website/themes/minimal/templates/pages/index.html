@@ -1,69 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-    <head>
-        <meta charset="utf-8" />
-
-        <!-- General medatada -->
-        <meta name="author" content="PyDataMCR" />
-        <meta name="title" content="PyDataMCR" />
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-        <!-- Social media tags -->
-        <meta property="og:title" content="PyDataMCR" />
-        <meta property="og:description" content="" />
-        <meta property="og:image" content="./images/cover-image.jpg" />
-        <meta property="og:url" content="." />
-        <meta property="og:site_name" content="PyDataMCR" />
-        <meta name="twitter:site" content="@haltakov" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image:alt" content="" />
-
-        <!-- Page title -->
-        <title>PyDataMCR</title>
-
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="./images/logo_16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="./images/logo_32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="./images/logo_96.png" sizes="96x96" />
-
-        <!-- CSS -->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="./theme/css/main.css" />
-
-        <!-- RSS and Atom feeds -->
- 
-        <!-- Block for additional page specific header tags -->
-        <!-- prettier-ignore -->
-        
-    </head>
-
-    <body class="d-flex flex-column h-100">
-        <!-- Navigation bar -->
-        <header class="border-bottom p-1 bg-white">
-            <nav class="navbar navbar-expand">
-                <a class="navbar-brand text-dark" href="."
-                    ><img src="./images/logo_256.png" class="logo mr-2" alt="I Want To Read More Logo" />
-                    <span class="d-none d-sm-inline">I Want To Read More</span></a
-                >
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="p-2 text-dark" href=".">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="p-2 text-dark" href="./blog">Blog</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Page content block -->
+{% extends "base.html" %} {% block content %}
 <!-- Header image and text -->
 <div class="container-fluid site-header p-0">
     <div class="site-header-overlay">
@@ -153,7 +88,7 @@
 
         <div class="row justify-content-center mt-5">
             <div class="col-md-8 col-lg-6">
-                <img class="img-fluid shadow" src="./images/demo-travel-blog.png" alt="Image Description" />
+                <img class="img-fluid shadow" src="{{ SITEURL }}/images/demo-travel-blog.png" alt="Image Description" />
             </div>
         </div>
 
@@ -175,7 +110,7 @@
                 We still have a bit more work and polishing to do. Leave us your e-mail in the form below, if you want
                 to get early access to the free trial. We will get back to you soon. We care about privacy and we will
                 not use your e-mail address for anything else. You can read more about our approach
-                <a href="./blog" target="_blank">here</a>.
+                <a href="{{ SITEURL }}/blog" target="_blank">here</a>.
             </div>
         </div>
 
@@ -202,7 +137,7 @@
 
     <div class="row justify-content-lg-center">
         <div class="col-md-4 col-lg-3 text-center pt-4">
-            <img class="w-25" src="./images/icon_simple.svg" alt="I Want To Read More is simple" />
+            <img class="w-25" src="{{ SITEURL }}/images/icon_simple.svg" alt="I Want To Read More is simple" />
         </div>
         <div class="col-md-8 col-lg-7">
             <div>
@@ -222,7 +157,7 @@
 
     <div class="row justify-content-lg-center mt-3">
         <div class="col-md-4 col-lg-3 text-center pt-4">
-            <img class="w-25" src="./images/icon_open.svg" alt="I Want To Read More is open" />
+            <img class="w-25" src="{{ SITEURL }}/images/icon_open.svg" alt="I Want To Read More is open" />
         </div>
         <div class="col-md-8 col-lg-7">
             <div>
@@ -245,7 +180,7 @@
         <div class="col-md-4 col-lg-3 text-center pt-4">
             <img
                 class="w-25"
-                src="./images/icon_private.svg"
+                src="{{ SITEURL }}/images/icon_private.svg"
                 alt="I Want To Read More is privacy-oriented"
             />
         </div>
@@ -266,35 +201,4 @@
         <a href="#subscribe" class="btn btn-blue">Get started improving your blog for free</a>
     </div>
 </div>
-
-        <!-- Footer -->
-        <footer class="footer mt-auto py-3 site-footer text-center text-muted">
-            <div class="container">
-                <span class="">I Want To Read More</span>
-                <a class="icon-link px-3" href="https://twitter.com/haltakov"><i class="fab fa-twitter"></i></a>
-                <a class="icon-link px-1" href="https://github.com/haltakov"><i class="fab fa-github"></i></a>
-            </div>
-        </footer>
-
-        <!-- JavaScript -->
-        <script src="https://kit.fontawesome.com/0598d5a60d.js" crossorigin="anonymous"></script>
-        <script
-            src="https://code.jquery.com/jquery-3.5.0.min.js"
-            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"
-        ></script>
-        <script src="./theme/js/main.js"></script>
-
-        <!-- Optional page specific scripts block -->
-     </body>
-</html>
+{% endblock content %}
