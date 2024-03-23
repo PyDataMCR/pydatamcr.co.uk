@@ -13,9 +13,9 @@ THEME = "themes/minimal/"
 
 # Static pages of the website that will be generated
 TEMPLATE_PAGES = {
-    "pages/index.html": "index.html",
-    "pages/404.html": "404.html",
     "pages/about-us.html": "about-us.html",
+    "pages/404.html": "404.html",
+    "pages/sponsorship.html": "sponsorship.html",
 }
 
 # Static paths of the website
