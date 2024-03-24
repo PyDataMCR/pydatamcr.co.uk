@@ -13,9 +13,10 @@ THEME = "themes/minimal/"
 
 # Static pages of the website that will be generated
 TEMPLATE_PAGES = {
-    "pages/about-us.html": "about-us.html",
-    "pages/404.html": "404.html",
-    "pages/sponsorship.html": "sponsorship.html",
+    "pages/index.html": "index.html",             # Force the redirect -> about-us
+    "pages/about-us.html": "about-us.html",       # Details about PyData
+    "pages/sponsorship.html": "sponsorship.html", # Link out to contact form
+    "pages/jobs-board.html": "jobs-board.html",   # Job Board
 }
 
 # Static paths of the website
@@ -28,13 +29,19 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Settings for the URLs of the blog and the articles
-ARTICLE_PATHS = ["events"]
-ARTICLE_URL = "events/{slug}/"
-ARTICLE_SAVE_AS = "events/{slug}/index.html"
-INDEX_SAVE_AS = "events.html"
+# Settings for URLs :: Note: Articles = Events
+ARTICLE_PATHS = ["events"]                   # The folder in website > content to look for events
+ARTICLE_URL = "events/{slug}/"               # The URL redirect for the events
+ARTICLE_SAVE_AS = "events/{slug}/info.html"  # The location to save the event information
+INDEX_SAVE_AS = "events.html"                # The location to save the list of all events?
 
-# Disbale unneeded blog features
+# Settings for URLs :: Note: Authors = Jobs
+# AUTHOR_PATH = ["jobs"]                         # The folder in website > content to look for jobs
+# AUTHOR_URL = "jobs/{slug}/"                    # The URL redirect for the jobs
+# AUTHOR_SAVE_AS = "jobs/{slug}/info.html"       # The location to save the job information
+# AUTHORS_SAVE_AS = "jobs.html"                  # The location to save the list of all jobs?
+
+# Disable unneeded blog features
 ARCHIVES_SAVE_AS = ""
 AUTHOR_SAVE_AS = ""
 AUTHORS_SAVE_AS = ""

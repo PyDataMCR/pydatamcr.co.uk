@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container text-center">
+  <div class="">
+    <img
+      src = "{% block image %}{{ SITEURL }}/images/PyDataLogo.webp{% endblock %}"
+      alt = "PyDataMCR Logo"
+      style = "width: 100%; max-width: 600px;"
+    >
+  </div>
+  <div class = "">
+    Content Jobs
+  </div>
+
+{% endblock content %}
